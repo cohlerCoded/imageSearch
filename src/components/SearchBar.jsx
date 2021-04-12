@@ -2,10 +2,21 @@ import React, { Component } from "react";
 
 export default class SearchBar extends Component {
   state = { input: "" };
+
+  // onFormSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(this.state.input);
+  // };
+
+  onFormSubmit(e) {
+    e.preventDefault();
+    console.log(this.state.input);
+  }
+
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form" action="">
+        <form className="ui form" onSubmit={(e) => this.onFormSubmit(e)}>
           <div className="field">
             <label htmlFor="search">Image Search</label>
             <input
