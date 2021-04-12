@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 
 export default class SearchBar extends Component {
-  //   state = { input: "" };
-  //   onInputChange(event) {
-  //     console.log(event.target.value);
-  //   }
-  //   onInputClick() {
-  //     console.log("CLICKED");
-  //   }
+  state = { input: "" };
   render() {
     return (
       <div className="ui segment">
@@ -17,9 +11,8 @@ export default class SearchBar extends Component {
             <input
               type="search"
               id="search"
-              onChange={(e) => console.log(e.target.value)} // syntax used for single line of code
-              //   onChange={this.onInputChange}
-              //   onClick={this.onInputClick}
+              value={this.state.input}
+              onChange={(e) => this.setState({ input: e.target.value })}
             ></input>
           </div>
           <button className="ui inverted primary button">Primary</button>
