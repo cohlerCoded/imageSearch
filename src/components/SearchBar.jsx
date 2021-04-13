@@ -21,7 +21,7 @@ export default class SearchBar extends Component {
               onChange={(e) => this.setState({ input: e.target.value })}
             ></input>
           </div>
-          <button className="ui inverted primary button">Primary</button>
+          <button className="ui inverted primary button">Search</button>
         </form>
       </div>
     );
